@@ -1,7 +1,10 @@
 package app
 
-import "fmt"
+import "music/internal/app"
 
 func main() {
-	fmt.Print("init project")
+	_, err := app.NewApp()
+	if err != nil {
+		panic(err)
+	}
 }
